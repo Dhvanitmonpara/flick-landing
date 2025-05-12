@@ -8,10 +8,10 @@ import { ArrowRightIcon } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen px-4 bg-gradient-to-tr from-red-50 via-red-100 to-background">
+    <div className="min-h-screen px-4 bg-gradient-to-tr from-sky-100/50 via-sky-50/90 to-background">
       <div className="max-w-5xl mx-auto gap-8">
         <Header />
-        <div className="flex flex-col justify-center items-center gap-8 h-[500px] md:h-[600px] lg:h-[800px]">
+        <div className="flex flex-col justify-center items-center gap-8 h-[500px] md:h-[600px] lg:h-[700px]">
           <AnimateWrapper delay={0.3} once>
             <div
               className={cn(

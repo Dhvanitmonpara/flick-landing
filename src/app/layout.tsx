@@ -1,35 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import localFont from 'next/font/local'
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const avallon = localFont({
-  src: '../assets/fonts/avallon-regular/Avallon.woff2',
-  display: 'swap',
-  variable: "--font-avallon"
-})
-
-export const editorial = localFont({
-  src: '../assets/fonts/editorial-old-font/ppeditorialold-regular.otf',
-  display: 'swap',
-  variable: "--font-editorial"
-})
-
-export const garnett = localFont({
-  src: '../assets/fonts/garnett/Garnett-Regular.ttf',
-  display: 'swap',
-  variable: "--font-garnett"
-})
+import { geistMono, geistSans } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
