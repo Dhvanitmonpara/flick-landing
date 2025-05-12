@@ -4,7 +4,7 @@ import { IoIosArrowForward, IoMdArrowForward } from "react-icons/io";
 import { Button } from "../ui/button";
 import { useState } from "react";
 
-const CTAButton = ({ size = "xl" }: { size?: "sm" | "lg" | "xl" }) => {
+const CTAButton = ({ size = "xl", className }: { size?: "sm" | "lg" | "xl", className?: string }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <Button
@@ -12,7 +12,7 @@ const CTAButton = ({ size = "xl" }: { size?: "sm" | "lg" | "xl" }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       variant="primary"
-      className="group transition-all hover:scale-105 hover:shadow-xl hover:bg-red-500/90"
+      className={`group transition-all hover:scale-105 hover:shadow-xl hover:bg-red-500/90 ${className}`}
     >
       <span>Start Flicking</span>
       {isHovered ? <IoMdArrowForward className="text-sm" /> : <IoIosArrowForward className="text-sm" />}

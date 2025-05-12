@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import CTAButton from './CTAButton';
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,17 +18,18 @@ function Header() {
 
   return (
     <div
-      className={`sticky flex justify-between items-center transition-all duration-300 mx-auto z-50 bg-background rounded-full ${scrolled
-          ? 'top-8 shadow-md h-14 max-w-4xl px-12'
-          : 'top-0 h-24 max-w-5xl'
+      className={`sticky flex justify-between items-center transition-all duration-300 mx-auto z-50 rounded-full ${scrolled
+        ? 'top-8 shadow-md h-14 max-w-4xl pl-12 pr-2 bg-background'
+        : 'top-0 h-24 max-w-5xl'
         }`}
     >
-      <div className='font-avallon text-3xl'>
+      <div className='font-avallon text-3xl animate-fade-in-blur'>
         <Link href="/">Flick</Link>
       </div>
-      <div className='flex justify-center items-center gap-12'>
+      <div className={`flex justify-center items-center ${scrolled ? "gap-8" : "gap-12"} animate-fade-in-blur`}>
         <Link className='hover:text-primary hover:font-semibold' href="/">Features</Link>
         <Link className='hover:text-primary hover:font-semibold' href="/">How it works</Link>
+        {scrolled && <CTAButton className='animate-slide-in-left' />}
       </div>
     </div>
   );
