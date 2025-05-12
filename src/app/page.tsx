@@ -68,6 +68,7 @@ export default function Home() {
             </FeatureCard>
           </div>
         </div>
+        <div className="h-screen"></div>
       </div>
     </div >
   );
