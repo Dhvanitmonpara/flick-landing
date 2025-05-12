@@ -11,14 +11,14 @@ export default function Home() {
     <div className="min-h-screen px-4 bg-gradient-to-tr from-red-50 via-red-100 to-background">
       <div className="max-w-5xl mx-auto gap-8">
         <Header />
-        <div className="flex flex-col justify-center items-center gap-8 h-[800px]">
+        <div className="flex flex-col justify-center items-center gap-8 h-[500px] md:h-[600px] lg:h-[800px]">
           <AnimateWrapper delay={0.3} once>
             <div
               className={cn(
                 "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800",
               )}
             >
-              <AnimatedShinyText className="inline-flex text-sm cursor-pointer items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+              <AnimatedShinyText className="inline-flex text-xs md:text-sm cursor-pointer items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
                 <span>✨ Follow Flick on X</span>
                 <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
               </AnimatedShinyText>
@@ -28,12 +28,11 @@ export default function Home() {
             <TextAnimate as="h1" delay={0.4} className="font-editorial text-center max-w-5xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl" animation="blurInUp" by="word" once>
               An exclusive, anonymous Reddit — only for college students.
             </TextAnimate>
-            <TextAnimate delay={0.6} className="font-garnett text-center max-w-5xl text-lg sm:text-xl md:text-2xl" animation="blurInUp" by="character" once>
+            <TextAnimate delay={0.6} className="font-garnett text-center max-w-5xl text-lg sm:text-xl md:text-2xl" animation="blurInUp" by="word" once>
               Spill secrets, share advice, vent frustrations. No names, no judgment.
             </TextAnimate>
           </div>
           <AnimateWrapper delay={0.8} once>
-            {/* <InteractiveHoverButton className="active:scale-95 transition-all">Start Flicking</InteractiveHoverButton> */}
             <CTAButton />
           </AnimateWrapper>
         </div>

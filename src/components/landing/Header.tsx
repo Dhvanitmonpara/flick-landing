@@ -20,13 +20,13 @@ function Header() {
     <div
       className={`sticky flex justify-between items-center transition-all duration-300 mx-auto z-50 rounded-full ${scrolled
         ? 'top-8 shadow-md h-14 max-w-4xl pl-12 pr-2 bg-background'
-        : 'top-0 h-24 max-w-5xl'
+        : 'top-8 shadow-md h-14 max-w-4xl bg-background pl-12 pr-2 sm:px-0 sm:bg-transparent sm:shadow-none sm:top-0 sm:h-24 sm:max-w-5xl'
         }`}
     >
       <div className='font-avallon text-3xl animate-fade-in-blur'>
         <Link href="/">Flick</Link>
       </div>
-      <div className={`flex justify-center items-center ${scrolled ? "gap-8" : "gap-12"} animate-fade-in-blur`}>
+      <div className={`justify-center items-center hidden sm:flex ${scrolled ? "gap-8" : "gap-12"} animate-fade-in-blur`}>
         <Link className='hover:text-primary hover:font-semibold' href="/">Features</Link>
         <Link className='hover:text-primary hover:font-semibold' href="/">How it works</Link>
         {scrolled && <CTAButton className='animate-slide-in-left' />}
