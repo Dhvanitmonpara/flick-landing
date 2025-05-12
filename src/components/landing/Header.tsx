@@ -36,21 +36,21 @@ function Header() {
 
   return (
     <div
-      className={`sticky flex justify-between items-center transition-all duration-300 mx-auto z-50 rounded-full ${scrolled
-        ? 'top-8 shadow-md h-14 max-w-4xl pl-12 pr-2 bg-background'
-        : 'top-8 shadow-md h-14 max-w-4xl bg-background pl-12 pr-2 sm:px-0 sm:bg-transparent sm:shadow-none sm:top-0 sm:h-24 sm:max-w-5xl'
+      className={`sticky flex justify-between items-center max-w-5xl transition-all duration-300 mx-auto z-50 ${scrolled
+        ? 'top-0 sm:top-8 sm:rounded-full shadow-md h-14 max-w-4xl px-12 sm:pl-12 sm:pr-2 bg-background'
+        : 'top-0 sm:rounded-full shadow-md h-14 max-w-4xl bg-background px-12 sm:px-0 sm:bg-transparent sm:shadow-none sm:h-24 sm:max-w-5xl'
         }`}
     >
-      <div className='font-avallon text-3xl animate-fade-in-blur'>
-        <Link href="/">Flick</Link>
+      <div className='font-avallon text-4xl animate-fade-in-blur'>
+        <Link href="/">F</Link>
       </div>
-      <div className={`justify-center items-center hidden sm:flex ${scrolled ? "gap-8" : "gap-12"} animate-fade-in-blur`}>
-        <Link className='hover:text-primary hover:font-semibold' href="/">Features</Link>
-        <Link className='hover:text-primary hover:font-semibold' href="/">How it works</Link>
+      <div className={`justify-center items-center ${scrolled ? "gap-8" : "gap-12"} animate-fade-in-blur`}>
+        <Link className='hover:text-primary hover:font-semibold hidden sm:flex' href="/">Features</Link>
+        <Link className='hover:text-primary hover:font-semibold hidden sm:flex' href="/">How it works</Link>
         <button className='cursor-pointer' onClick={themeHandler}>
           {isDarkMode ? <IoIosMoon /> : <IoMdSunny />}
         </button>
-        {scrolled && <CTAButton className='animate-slide-in-left' />}
+        {scrolled && <CTAButton className='animate-slide-in-left hidden sm:flex' />}
       </div>
     </div>
   );

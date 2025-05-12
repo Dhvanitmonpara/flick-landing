@@ -11,9 +11,9 @@ import { HiOutlineUserCircle } from "react-icons/hi";
 
 export default function Home() {
   return (
-    <div className="min-h-screen px-4 bg-gradient-to-tr from-sky-100/50 via-sky-50/80 dark:from-sky-900/10 dark:via-sky-950/20 to-background">
-      <div className="max-w-5xl mx-auto">
-        <Header />
+    <div className="min-h-screen bg-gradient-to-tr from-sky-100/50 via-sky-50/80 dark:from-sky-900/10 dark:via-sky-950/20 to-background">
+      <Header />
+      <div className="max-w-5xl mx-auto px-4">
         <div className="flex flex-col justify-center items-center gap-8 h-[500px] md:h-[600px] lg:h-[700px] pb-8">
           <AnimateWrapper delay={0.3} once>
             <div
@@ -31,7 +31,7 @@ export default function Home() {
             <TextAnimate as="h1" delay={0.4} className="font-editorial text-center max-w-5xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl" animation="blurInUp" by="word" once>
               An exclusive, anonymous Reddit — only for college students.
             </TextAnimate>
-            <TextAnimate delay={0.6} className="font-garnett text-center max-w-5xl text-lg sm:text-xl md:text-2xl" animation="blurInUp" by="word" once>
+            <TextAnimate delay={0.6} className="font-inter text-center pt-1 max-w-5xl text-lg sm:text-xl md:text-2xl" animation="blurInUp" by="word" once>
               Spill secrets, share advice, vent frustrations. No names, no judgment.
             </TextAnimate>
           </div>

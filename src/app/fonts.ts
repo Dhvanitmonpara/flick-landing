@@ -29,3 +29,15 @@ export const garnett = localFont({
   display: 'swap',
   variable: "--font-garnett"
 });
+
+export const inter = localFont({
+  src: '../assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf',
+  display: 'swap',
+  variable: "--font-inter"
+})
+
+export const poppins = localFont({
+  src: '../assets/fonts/Poppins/Poppins-Regular.ttf',
+  display: 'swap',
+  variable: "--font-poppins"
+})
