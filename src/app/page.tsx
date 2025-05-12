@@ -8,10 +8,10 @@ import { ArrowRightIcon } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen px-4 bg-gradient-to-tr from-sky-100/50 via-sky-50/90 to-background">
+    <div className="min-h-screen px-4 bg-gradient-to-tr from-sky-100/50 via-sky-50/80 dark:from-sky-900/10 dark:via-sky-950/20 to-background">
       <div className="max-w-5xl mx-auto gap-8">
         <Header />
-        <div className="flex flex-col justify-center items-center gap-8 h-[500px] md:h-[600px] lg:h-[700px]">
+        <div className="flex flex-col justify-center items-center gap-8 h-[500px] md:h-[600px] lg:h-[700px] pb-8">
           <AnimateWrapper delay={0.3} once>
             <div
               className={cn(
@@ -24,7 +24,7 @@ export default function Home() {
               </AnimatedShinyText>
             </div>
           </AnimateWrapper>
-          <div className="flex flex-col justify-center items-center text-neutral-800">
+          <div className="flex flex-col justify-center items-center text-neutral-700 dark:text-neutral-300">
             <TextAnimate as="h1" delay={0.4} className="font-editorial text-center max-w-5xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl" animation="blurInUp" by="word" once>
               An exclusive, anonymous Reddit — only for college students.
             </TextAnimate>
