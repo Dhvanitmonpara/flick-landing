@@ -12,7 +12,7 @@ const CTAButton = ({ size = "xl", className }: { size?: "sm" | "lg" | "xl", clas
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       variant="primary"
-      className={`group transition-all hover:scale-105 hover:shadow-xl hover:bg-red-500/90 ${className}`}
+      className={`group transition-all font-inter hover:scale-105 hover:shadow-xl hover:bg-red-500/90 ${className}`}
     >
       <span>Start Flicking</span>
       {isHovered ? <IoMdArrowForward className="text-sm" /> : <IoIosArrowForward className="text-sm" />}

@@ -38,7 +38,7 @@ function Header() {
     <div
       className={`sticky flex justify-between items-center transition-all duration-300 mx-auto z-50 ${scrolled
         ? 'top-0 lg:top-8 lg:rounded-full shadow-md h-14 lg:max-w-4xl px-12 lg:px-2 bg-background'
-        : 'top-0 lg:rounded-full shadow-md h-14 max-w-4xl bg-background px-12 lg:px-0 lg:bg-transparent lg:shadow-none sm:h-24 sm:max-w-5xl'
+        : 'top-0 lg:rounded-full shadow-md h-14 max-w-4xl px-12 lg:px-0 sm:bg-transparent sm:shadow-none sm:h-24 sm:max-w-5xl'
         }`}
     >
       <div className='font-avallon text-4xl animate-fade-in-blur lg:w-24 text-center'>
@@ -50,7 +50,7 @@ function Header() {
         <button className='cursor-pointer' onClick={themeHandler}>
           {isDarkMode ? <IoIosMoon /> : <IoMdSunny />}
         </button>
-        {scrolled && <CTAButton className='animate-slide-in-left hidden sm:flex' />}
+        {scrolled && <CTAButton size='lg' className='animate-slide-in-left hidden sm:flex' />}
       </div>
     </div>
   );

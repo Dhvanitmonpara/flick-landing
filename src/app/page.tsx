@@ -1,17 +1,17 @@
 import { AnimateWrapper } from "@/components/animations/AnimateWrapper";
 import CTAButton from "@/components/landing/CTAButton";
+import { FeatureCard } from "@/components/landing/FeatureCard";
 import Header from "@/components/landing/Header";
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "lucide-react";
-import { JSX, ReactNode } from "react";
 import { FaChartLine, FaRocket, FaUniversity } from "react-icons/fa";
 import { HiOutlineUserCircle } from "react-icons/hi";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-sky-100/50 via-sky-50/80 dark:from-sky-900/10 dark:via-sky-950/20 to-background">
+    <div className="min-h-screen bg-gradient-to-tr from-sky-50/60 via-sky-100/80 dark:from-sky-900/30 dark:via-sky-950/50 to-background">
       <Header />
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex flex-col justify-center items-center gap-8 h-[500px] md:h-[600px] lg:h-[700px] pb-8">
@@ -36,49 +36,34 @@ export default function Home() {
             </TextAnimate>
           </div>
           <AnimateWrapper delay={0.8} once>
-            <CTAButton />
+            <CTAButton size="xl" className="p-6 text-sm md:text-md xl:text-lg" />
           </AnimateWrapper>
         </div>
         <div className="rounded-2xl overflow-hidden animate-fade-in-blur shadow-[0_-4px_28px_rgba(0,0,0,0.25)] border-[0.5px]">
-          <div className="bg-zinc-100 dark:bg-zinc-700 h-8 flex justify-between items-center px-6">
+          <div className="bg-zinc-100 dark:bg-zinc-800 h-8 flex justify-between items-center px-6">
             <div className="flex justify-center items-center gap-2">
               <span className="rounded-full bg-red-400 w-3.5 h-3.5"></span>
               <span className="rounded-full bg-yellow-400 w-3.5 h-3.5"></span>
               <span className="rounded-full bg-green-400 w-3.5 h-3.5"></span>
             </div>
           </div>
-          <iframe height="100" width="100" className="h-full w-full" src="https://www.youtube.com/embed/NdJ_y1c_j_I?si=fjHelVhND9MuCchV" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          <div className="flex justify-center items-center h-[500px]">
+            <p>Coming soon...</p>
+          </div>
         </div>
-        <div className="mt-16">
-          <h3 className="text-3xl font-semibold font-editorial text-center mb-8">
+        <div className="mt-32">
+          <h3 className="text-3xl font-semibold font-inter text-center mb-8">
             Why Flick?
           </h3>
-          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 text-center">
-            <FeatureCard icon={<HiOutlineUserCircle className="text-3xl" />}>
-              100% Anonymity — Speak your mind freely.
-            </FeatureCard>
-            <FeatureCard icon={<FaUniversity className="text-3xl" />}>
-              Student-Only Clubs — Each campus has a private feed.
-            </FeatureCard>
-            <FeatureCard icon={<FaChartLine className="text-3xl" />}>
-              Earn Roles & Tags — Upvotes unlock exclusive badges.
-            </FeatureCard>
-            <FeatureCard icon={<FaRocket className="text-3xl" />}>
-              No Noise, No Ads — Just real talk, real people.
-            </FeatureCard>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-2 text-center">
+            <FeatureCard title="100% Anonymity" description="Speak your mind freely." icon={<HiOutlineUserCircle className="text-3xl" />} />
+            <FeatureCard title="Student-Only Clubs" description="Each campus has a private feed." icon={<FaUniversity className="text-3xl" />} />
+            <FeatureCard title="Earn Roles & Tags" description="Upvotes unlock exclusive badges." icon={<FaChartLine className="text-3xl" />} />
+            <FeatureCard title="No Noise, No Ads" description="Just real talk, real people." icon={<FaRocket className="text-3xl" />} />
           </div>
         </div>
         <div className="h-screen"></div>
       </div>
     </div >
   );
-}
-
-const FeatureCard = ({ icon, children }: { icon: JSX.Element | string, children: ReactNode }) => {
-  return (
-    <div className="flex flex-col items-center space-y-4 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-8">
-      {icon}
-      <p className="text-lg font-medium">{children}</p>
-    </div>
-  )
 }
