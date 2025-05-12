@@ -19,9 +19,15 @@ export const avallon = localFont({
 });
 
 export const editorial = localFont({
-  src: '../assets/fonts/editorial-old-font/ppeditorialold-regular.otf',
+  src: '../assets/fonts/editorial-old-font/PPEditorialNew-Regular-BF644b214ff145f.otf',
   display: 'swap',
   variable: "--font-editorial"
+});
+
+export const neuemontreal = localFont({
+  src: '../assets/fonts/Neue Montreal/NeueMontreal-Bold.otf',
+  display: 'swap',
+  variable: "--font-neue-montreal"
 });
 
 export const garnett = localFont({
