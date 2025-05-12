@@ -5,11 +5,14 @@ import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 import { TextAnimate } from "@/components/magicui/text-animate";
 import { cn } from "@/lib/utils";
 import { ArrowRightIcon } from "lucide-react";
+import { JSX, ReactNode } from "react";
+import { FaChartLine, FaRocket, FaUniversity } from "react-icons/fa";
+import { HiOutlineUserCircle } from "react-icons/hi";
 
 export default function Home() {
   return (
     <div className="min-h-screen px-4 bg-gradient-to-tr from-sky-100/50 via-sky-50/80 dark:from-sky-900/10 dark:via-sky-950/20 to-background">
-      <div className="max-w-5xl mx-auto gap-8">
+      <div className="max-w-5xl mx-auto">
         <Header />
         <div className="flex flex-col justify-center items-center gap-8 h-[500px] md:h-[600px] lg:h-[700px] pb-8">
           <AnimateWrapper delay={0.3} once>
@@ -44,10 +47,37 @@ export default function Home() {
               <span className="rounded-full bg-green-400 w-3.5 h-3.5"></span>
             </div>
           </div>
-          <iframe height={"100%"} width={"100%"} className="h-full w-full" src="https://www.youtube.com/embed/NdJ_y1c_j_I?si=fjHelVhND9MuCchV" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          <iframe height="100" width="100" className="h-full w-full" src="https://www.youtube.com/embed/NdJ_y1c_j_I?si=fjHelVhND9MuCchV" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
-        <div className="h-screen"></div>
+        <div className="mt-16">
+          <h3 className="text-3xl font-semibold font-editorial text-center mb-8">
+            Why Flick?
+          </h3>
+          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 text-center">
+            <FeatureCard icon={<HiOutlineUserCircle className="text-3xl" />}>
+              100% Anonymity — Speak your mind freely.
+            </FeatureCard>
+            <FeatureCard icon={<FaUniversity className="text-3xl" />}>
+              Student-Only Clubs — Each campus has a private feed.
+            </FeatureCard>
+            <FeatureCard icon={<FaChartLine className="text-3xl" />}>
+              Earn Roles & Tags — Upvotes unlock exclusive badges.
+            </FeatureCard>
+            <FeatureCard icon={<FaRocket className="text-3xl" />}>
+              No Noise, No Ads — Just real talk, real people.
+            </FeatureCard>
+          </div>
+        </div>
       </div>
-    </div>
+    </div >
   );
+}
+
+const FeatureCard = ({ icon, children }: { icon: JSX.Element | string, children: ReactNode }) => {
+  return (
+    <div className="flex flex-col items-center space-y-4 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-8">
+      {icon}
+      <p className="text-lg font-medium">{children}</p>
+    </div>
+  )
 }

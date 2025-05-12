@@ -24,6 +24,11 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const darkModeEnables = localStorage.getItem('theme') === 'dark';
+    if (darkModeEnables) changeTheme();
+  }, []);
+
   const themeHandler = () => {
     setIsDarkMode(!isDarkMode);
     changeTheme();
