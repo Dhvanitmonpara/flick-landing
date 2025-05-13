@@ -165,7 +165,7 @@ export default function Home() {
               className={[
                 (index === 2) ? "row-span-2 mt-16" : "row-span-3",
                 index === 0 && "!row-span-1 mt-8",
-                "p-4 rounded-lg shadow-md overflow-hidden"
+                "p-4 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.10)] overflow-hidden"
               ].join(" ")}
             />
           ))}
