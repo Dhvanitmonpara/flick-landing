@@ -11,14 +11,14 @@ import { HiOutlineUserCircle } from "react-icons/hi";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-sky-50/60 via-sky-100/80 dark:from-sky-900/30 dark:via-sky-950/50 to-background">
+    <div className="min-h-screen bg-gradient-to-tr from-sky-50/70 via-sky-100/90 dark:from-sky-900/30 dark:via-sky-950/50 to-background">
       <Header />
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col justify-center items-center gap-8 h-[500px] md:h-[600px] lg:h-[700px] pb-8">
           <AnimateWrapper delay={0.3} once>
             <div
               className={cn(
-                "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800",
+                "group rounded-full border border-sky-500/20 bg-sky-100 text-base text-zinc-950 transition-all ease-in hover:cursor-pointer hover:bg-sky-200 dark:border-sky-500/20 dark:bg-sky-950/60 dark:hover:bg-sky-900",
               )}
             >
               <AnimatedShinyText className="inline-flex text-xs md:text-sm cursor-pointer items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
@@ -31,7 +31,7 @@ export default function Home() {
             <TextAnimate as="h1" delay={0.4} className="font-neue-montreal text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl" animation="blurInUp" by="word" once>
               An exclusive, anonymous Reddit — only for college students.
             </TextAnimate>
-            <TextAnimate delay={0.6} className="font-inter text-center pt-3 text-lg sm:text-xl md:text-2xl" animation="blurInUp" by="word" once>
+            <TextAnimate delay={0.6} className="font-inter text-center mt-8 text-lg sm:text-xl md:text-2xl" animation="blurInUp" by="word" once>
               Spill secrets, share advice, vent frustrations. No names, no judgment.
             </TextAnimate>
           </div>
@@ -47,9 +47,7 @@ export default function Home() {
               <span className="rounded-full bg-green-400 w-3.5 h-3.5"></span>
             </div>
           </div>
-          <div className="flex justify-center items-center h-[500px]">
-            <p>Coming soon...</p>
-          </div>
+          <img src="/landing-mockup.png" alt="mockup" />
         </div>
         <div className="mt-32">
           <h3 className="text-3xl font-semibold font-inter text-center mb-12">
