@@ -15,7 +15,7 @@ const CTAButton = ({ size = "xl", className }: { size?: "sm" | "lg" | "xl", clas
       className={`group transition-all font-inter hover:scale-105 hover:shadow-xl hover:bg-red-500/90 ${className}`}
     >
       <span>Join Anonymously</span>
-      {isHovered ? <IoMdArrowForward className="text-sm" /> : <IoIosArrowForward className="text-sm" />}
+      {isHovered ? <IoMdArrowForward className="text-xs sm:text-sm" /> : <IoIosArrowForward className="text-xs sm:text-sm" />}
     </Button>
   )
 }
