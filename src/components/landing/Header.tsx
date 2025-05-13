@@ -41,8 +41,8 @@ function Header() {
         : 'top-2 lg:rounded-full h-14 max-w-4xl px-12 lg:px-0 sm:bg-transparent shadow-none sm:h-24 sm:max-w-6xl'
         }`}
     >
-      <div className='font-avallon text-4xl animate-fade-in-blur lg:w-24 text-center'>
-        <Link href="/">F</Link>
+      <div className='font-avallon text-3xl sm:text-4xl animate-fade-in-blur lg:w-24 text-center'>
+        <Link href="/">Flick</Link>
       </div>
       <div className={`flex justify-center items-center ${scrolled ? "gap-8" : "gap-12"} animate-fade-in-blur`}>
         <Link className='hover:text-primary hover:font-semibold hidden sm:block' href="/">Features</Link>

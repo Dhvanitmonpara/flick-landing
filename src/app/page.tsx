@@ -133,7 +133,7 @@ const mockPosts = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-sky-50/70 via-sky-100/90 dark:from-sky-900/30 dark:via-sky-950/50 to-background">
+    <div className="min-h-screen bg-gradient-to-tr bg-[linear-gradient(to_right,_#fdfcfb,_#e2d1c3)] dark:bg-[linear-gradient(to_right,_#2e2e2e,_#1a1a1a)]">
       <Header />
       <div className="max-w-6xl mx-auto px-8 lg:px-4">
         <div className="flex flex-col justify-center items-center gap-6 sm:gap-8 h-[450px] sm:h-[500px] md:h-[550px] lg:h-[600px] pb-8">
@@ -144,7 +144,7 @@ export default function Home() {
             <TextAnimate as="h1" delay={0.4} className="font-neue-montreal text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl" animation="blurInUp" by="word" once>
               Your Anonymous Campus Hangout
             </TextAnimate>
-            <TextAnimate delay={0.6} className="font-inter text-center mt-4 sm:mt-6 sm:text-lg md:text-xl lg:text-2xl" animation="blurInUp" by="word" once>
+            <TextAnimate delay={0.6} className="font-inter text-center mt-4 text-zinc-700 dark:text-zinc-300 sm:mt-6 sm:text-lg md:text-xl lg:text-2xl" animation="blurInUp" by="word" once>
               Vent, share, connect - 100% anonymously. For Indian college students only.
             </TextAnimate>
           </div>
@@ -152,24 +152,26 @@ export default function Home() {
             <CTAButton size="xl" className="p-4 sm:p-6 text-sm md:text-md xl:text-lg" />
           </AnimateWrapper>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 grid-auto-rows-[150px]">
-          {mockPosts.map((post, index) => (
-            <Post
-              key={index}
-              title={post.title}
-              description={post.description}
-              date={post.date}
-              university={post.university}
-              username={post.username}
-              branch={post.branch}
-              className={[
-                (index === 2) ? "row-span-2 mt-16" : "row-span-3",
-                index === 0 && "!row-span-1 mt-8",
-                "p-4 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.10)] overflow-hidden"
-              ].join(" ")}
-            />
-          ))}
-        </div>
+        <AnimateWrapper animation="blurIn" duration={4000} delay={1} once>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 grid-auto-rows-[150px]">
+            {mockPosts.map((post, index) => (
+              <Post
+                key={index}
+                title={post.title}
+                description={post.description}
+                date={post.date}
+                university={post.university}
+                username={post.username}
+                branch={post.branch}
+                className={[
+                  (index === 2) ? "row-span-2 mt-16" : "row-span-3",
+                  index === 0 && "!row-span-1 mt-8",
+                  "p-4 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.10)] overflow-hidden"
+                ].join(" ")}
+              />
+            ))}
+          </div>
+        </AnimateWrapper>
         <div className="rounded-xl mt-24 sm:mt-32 sm:rounded-2xl overflow-hidden animate-fade-in-blur shadow-[0_-4px_28px_rgba(0,0,0,0.25)] border-[0.5px]">
           <div className="bg-zinc-100 dark:bg-zinc-800 h-6 sm:h-8 flex justify-between items-center px-4 sm:px-6">
             <div className="flex justify-center items-center gap-1 sm:gap-2">
@@ -181,9 +183,11 @@ export default function Home() {
           <img src="/landing-mockup.png" alt="mockup" />
         </div>
         <div className="mt-24 sm:mt-32">
-          <h3 className="text-2xl sm:text-3xl font-semibold font-inter text-center mb-8 sm:mb-12">
-            Why Flick?
-          </h3>
+          <AnimateWrapper animation="blurIn" once>
+            <h3 className="text-2xl sm:text-3xl font-semibold font-inter text-center mb-8 sm:mb-12">
+              Why Flick?
+            </h3>
+          </AnimateWrapper>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-2 text-center">
             <FeatureCard title="100% Anonymity" description="Speak your mind freely." icon={<HiOutlineUserCircle className="text-3xl" />} />
             <FeatureCard title="Student-Only Clubs" description="Each campus has a private feed." icon={<FaUniversity className="text-3xl" />} />

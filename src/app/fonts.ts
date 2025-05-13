@@ -24,6 +24,12 @@ export const editorial = localFont({
   variable: "--font-editorial"
 });
 
+export const soupbone = localFont({
+  src: '../assets/fonts/SoupBone/SoupBone-Regular.ttf',
+  display: 'swap',
+  variable: "--font-soupbone"
+});
+
 export const neuemontreal = localFont({
   src: '../assets/fonts/Neue Montreal/NeueMontreal-Bold.otf',
   display: 'swap',
