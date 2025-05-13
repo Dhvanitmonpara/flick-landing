@@ -152,26 +152,24 @@ export default function Home() {
             <CTAButton size="xl" className="p-4 sm:p-6 text-sm md:text-md xl:text-lg" />
           </AnimateWrapper>
         </div>
-        <AnimateWrapper animation="blurIn" duration={4000} delay={1} once>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 grid-auto-rows-[150px]">
-            {mockPosts.map((post, index) => (
-              <Post
-                key={index}
-                title={post.title}
-                description={post.description}
-                date={post.date}
-                university={post.university}
-                username={post.username}
-                branch={post.branch}
-                className={[
-                  (index === 2) ? "row-span-2 mt-16" : "row-span-3",
-                  index === 0 && "!row-span-1 mt-8",
-                  "p-4 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.10)] overflow-hidden"
-                ].join(" ")}
-              />
-            ))}
-          </div>
-        </AnimateWrapper>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 grid-auto-rows-[150px]">
+          {mockPosts.map((post, index) => (
+            <Post
+              key={index}
+              title={post.title}
+              description={post.description}
+              date={post.date}
+              university={post.university}
+              username={post.username}
+              branch={post.branch}
+              className={[
+                (index === 2) ? "row-span-2 mt-16" : "row-span-3",
+                index === 0 && "!row-span-1 mt-8",
+                "p-4 rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.10)] overflow-hidden"
+              ].join(" ")}
+            />
+          ))}
+        </div>
         <div className="rounded-xl mt-24 sm:mt-32 sm:rounded-2xl overflow-hidden animate-fade-in-blur shadow-[0_-4px_28px_rgba(0,0,0,0.25)] border-[0.5px]">
           <div className="bg-zinc-100 dark:bg-zinc-800 h-6 sm:h-8 flex justify-between items-center px-4 sm:px-6">
             <div className="flex justify-center items-center gap-1 sm:gap-2">
@@ -182,17 +180,25 @@ export default function Home() {
           </div>
           <img src="/landing-mockup.png" alt="mockup" />
         </div>
-        <div className="mt-24 sm:mt-32">
-          <AnimateWrapper animation="blurIn" once>
-            <h3 className="text-2xl sm:text-3xl font-semibold font-inter text-center mb-8 sm:mb-12">
-              Why Flick?
-            </h3>
-          </AnimateWrapper>
+        <div className="mt-24 sm:mt-32 animate-fade-in-blur">
+          <h3 className="text-2xl sm:text-3xl font-semibold font-inter text-center mb-8 sm:mb-12">
+            Why Flick?
+          </h3>
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-2 text-center">
             <FeatureCard title="100% Anonymity" description="Speak your mind freely." icon={<HiOutlineUserCircle className="text-3xl" />} />
             <FeatureCard title="Student-Only Clubs" description="Each campus has a private feed." icon={<FaUniversity className="text-3xl" />} />
             <FeatureCard title="Earn Roles & Tags" description="Upvotes unlock exclusive badges." icon={<FaChartLine className="text-3xl" />} />
             <FeatureCard title="No Noise, No Ads" description="Just real talk, real people." icon={<FaRocket className="text-3xl" />} />
+          </div>
+        </div>
+        <div className="mt-24 sm:mt-32 animate-fade-in-blur">
+          <h3 className="text-2xl sm:text-3xl font-semibold font-inter text-center mb-8 sm:mb-12">
+            How it works?
+          </h3>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-2 text-center">
+            <div className="">
+              
+            </div>
           </div>
         </div>
         <div className="h-screen"></div>
