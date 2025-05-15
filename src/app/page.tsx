@@ -2,6 +2,8 @@ import { AnimateWrapper } from "@/components/animations/AnimateWrapper";
 import CTAButton from "@/components/landing/CTAButton";
 import { FeatureCard } from "@/components/landing/FeatureCard";
 import Header from "@/components/landing/Header";
+import HowItWorksCard from "@/components/landing/HowItWorks";
+import HowItWorks from "@/components/landing/HowItWorks";
 import Post from "@/components/landing/Post";
 import SecondaryButton from "@/components/landing/SecondaryButton";
 import { TextAnimate } from "@/components/magicui/text-animate";
@@ -195,10 +197,16 @@ export default function Home() {
           <h3 className="text-2xl sm:text-3xl font-semibold font-inter text-center mb-8 sm:mb-12">
             How it works?
           </h3>
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-2 text-center">
-            <div className="">
-              
-            </div>
+          <div className="flex justify-between items-center text-center">
+            {howItWorksSteps.map((step, idx) => (
+              <HowItWorksCard
+                key={idx}
+                className={step.className}
+                emoji={step.emoji}
+                title={step.title}
+                description={step.description}
+              />
+            ))}
           </div>
         </div>
         <div className="h-screen"></div>
@@ -206,3 +214,24 @@ export default function Home() {
     </div >
   );
 }
+
+const howItWorksSteps = [
+  {
+    emoji: '⚡',
+    title: 'Sign up faster than your hostel WiFi crashes',
+    className: "bg-yellow-100 dark:bg-yellow-900",
+    description: "Just verify you’re a student with your college email, and you’re in—no bios, no selfies, just vibes.",
+  },
+  {
+    emoji: '🗣️',
+    title: 'Join the campus chai-time gupshup',
+    className: "bg-sky-100 dark:bg-sky-900 rotate-[-2deg] hover:rotate-0",
+    description: "Spill the beans, share memes, or vent about exams—anonymously. The class group just got spicier!",
+  },
+  {
+    emoji: '🔥',
+    title: 'Earn karma, flex your branch pride ',
+    className: "bg-green-100 dark:bg-green-900",
+    description: "Stay active, share vibes, and unlock tags like ‘CS King’ or ‘Fest Champ’ to show off your campus cred—100% anonymously!",
+  },
+];
