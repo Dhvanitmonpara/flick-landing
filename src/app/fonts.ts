@@ -30,6 +30,35 @@ export const soupbone = localFont({
   variable: "--font-soupbone"
 });
 
+export const caveat  = localFont({
+  src: '../assets/fonts/Caveat/static/Caveat-Regular.ttf',
+  display: 'swap',
+  variable: "--font-caveat"
+})
+
+export const gloria  = localFont({
+  src: '../assets/fonts/Gloria_Hallelujah/GloriaHallelujah-Regular.ttf',
+  display: 'swap',
+  variable: "--font-gloria"
+})
+
+export const handlee  = localFont({
+  src: '../assets/fonts/Handlee/Handlee-Regular.ttf',
+  display: 'swap',
+  variable: "--font-handlee"
+})
+
+export const patrickhand  = localFont({
+  src: '../assets/fonts/Patrick_Hand/PatrickHand-Regular.ttf',
+  display: 'swap',
+  variable: "--font-patrickhand"
+})
+export const shadowsintolight  = localFont({
+  src: '../assets/fonts/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf',
+  display: 'swap',
+  variable: "--font-shadowsintolight"
+})
+
 export const neuemontreal = localFont({
   src: '../assets/fonts/Neue Montreal/NeueMontreal-Bold.otf',
   display: 'swap',

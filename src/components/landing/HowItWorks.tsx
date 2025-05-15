@@ -14,7 +14,7 @@ const HowItWorksCard = ({ emoji, title, description, className }: HowItWorksCard
       <h4 className="text-lg font-bold text-gray-800 dark:text-white mb-2">
         {title}
       </h4>
-      <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+      <p className="font-handlee text-gray-700 dark:text-gray-300 leading-relaxed">
         {description}
       </p>
     </div>

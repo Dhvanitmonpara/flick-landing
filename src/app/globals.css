@@ -33,6 +33,11 @@
   --font-soupbone: soupbone;
   --font-neue-montreal: neuemontreal;
   --font-poppins: poppins;
+  --font-caveat: caveat;
+  --font-gloria: gloria;
+  --font-handlee: handlee;
+  --font-patrickhand: patrickhand;
+  --font-shadowsintolight: shadowsintolight;
   --animate-fade-in-blur: fadeInWithBlur 1.5s ease-out;
   --animate-slide-in-left: slideInLeft 0.5s ease-out;
 }
