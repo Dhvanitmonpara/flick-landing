@@ -9,9 +9,9 @@ export function FAQs() {
   return (
     <Accordion type="single" collapsible className="w-full">
       {FAQsData.map(({ question, answer }) => (
-        <AccordionItem key={question} className="border-zinc-400 bg-transparent" value={question}>
-          <AccordionTrigger>{question}</AccordionTrigger>
-          <AccordionContent>
+        <AccordionItem key={question} className="border-none bg-transparent" value={question}>
+          <AccordionTrigger className="text-base font-semibold cursor-pointer text-zinc-900 dark:text-zinc-100">{question}</AccordionTrigger>
+          <AccordionContent className="text-zinc-600 dark:text-zinc-400 text-base">
             {answer}
           </AccordionContent>
         </AccordionItem>

@@ -9,6 +9,7 @@ import HowItWorks from "@/components/landing/HowItWorks";
 import Post from "@/components/landing/Post";
 import SecondaryButton from "@/components/landing/SecondaryButton";
 import { TextAnimate } from "@/components/magicui/text-animate";
+import howItWorksSteps from "@/data/HowItWorksSteps";
 import { FaChartLine, FaRocket, FaUniversity } from "react-icons/fa";
 import { HiOutlineUserCircle } from "react-icons/hi";
 
@@ -219,7 +220,7 @@ export default function Home() {
         </div>
       </div>
       <div className="mt-24 sm:mt-32 animate-fade-in-blur flex flex-col justify-center items-center space-y-6 px-4 text-center">
-        <h1 className="font-neue-montreal text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[12rem] font-extrabold bg-gradient-to-r from-[#dba979] via-[#f0cda0] to-[#c4a484] bg-clip-text text-transparent">
+        <h1 style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.05)' }} className="font-neue-montreal text-[#5f4b32]/5 text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[12rem] font-extrabold bg-gradient-to-r from-[#dfaf83] via-[#f0cda0] to-[#c4a484] bg-clip-text">
           Join Flick Today
         </h1>
 
@@ -233,24 +234,3 @@ export default function Home() {
     </div >
   );
 }
-
-const howItWorksSteps = [
-  {
-    emoji: '⚡',
-    title: 'Sign up faster than your hostel WiFi crashes',
-    className: "bg-yellow-100 dark:bg-yellow-900",
-    description: "Just verify you’re a student with your college email, and you’re in—no bios, no selfies, just vibes.",
-  },
-  {
-    emoji: '🗣️',
-    title: 'Join the campus chai-time gupshup',
-    className: "bg-sky-100 dark:bg-sky-900 rotate-[-2deg] md:hover:rotate-0",
-    description: "Spill the beans, share memes, or vent about exams—anonymously. The class group just got spicier!",
-  },
-  {
-    emoji: '🔥',
-    title: 'Earn karma, flex your branch pride ',
-    className: "bg-green-100 dark:bg-green-900",
-    description: "Stay active, share vibes, and unlock tags like ‘CS King’ or ‘Fest Champ’ to show off your campus cred—100% anonymously!",
-  },
-];
