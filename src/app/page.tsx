@@ -1,6 +1,8 @@
 import { AnimateWrapper } from "@/components/animations/AnimateWrapper";
 import CTAButton from "@/components/landing/CTAButton";
+import { FAQs } from "@/components/landing/FAQs";
 import { FeatureCard } from "@/components/landing/FeatureCard";
+import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
 import HowItWorksCard from "@/components/landing/HowItWorks";
 import HowItWorks from "@/components/landing/HowItWorks";
@@ -197,7 +199,7 @@ export default function Home() {
           <h3 className="text-2xl sm:text-3xl font-semibold font-inter text-center mb-8 sm:mb-12">
             How it works?
           </h3>
-          <div className="flex justify-between items-center text-center">
+          <div className="flex flex-col lg:flex-row space-y-4 justify-between items-center text-center">
             {howItWorksSteps.map((step, idx) => (
               <HowItWorksCard
                 key={idx}
@@ -209,8 +211,18 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="h-screen"></div>
+        <div className="mt-24 sm:mt-32 animate-fade-in-blur">
+          <h3 className="text-2xl sm:text-3xl font-semibold font-inter text-center mb-8 sm:mb-12">
+            FAQs
+          </h3>
+          <FAQs />
+        </div>
+        <div className="mt-24 sm:mt-32 animate-fade-in-blur flex flex-col justify-center items-center space-y-8">
+          <h1 className="font-neue-montreal opacity-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[9rem] text-center">Join Flick Today</h1>
+          <CTAButton className="px-8 py-6 text-lg" />
+        </div>
       </div>
+      <Footer />
     </div >
   );
 }
@@ -225,7 +237,7 @@ const howItWorksSteps = [
   {
     emoji: '🗣️',
     title: 'Join the campus chai-time gupshup',
-    className: "bg-sky-100 dark:bg-sky-900 rotate-[-2deg] hover:rotate-0",
+    className: "bg-sky-100 dark:bg-sky-900 rotate-[-2deg] md:hover:rotate-0",
     description: "Spill the beans, share memes, or vent about exams—anonymously. The class group just got spicier!",
   },
   {
