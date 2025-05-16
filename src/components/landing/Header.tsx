@@ -37,7 +37,7 @@ function Header() {
   return (
     <div
       className={`sticky flex justify-between items-center transition-all duration-300 mx-auto z-50 ${scrolled
-        ? 'top-0 lg:top-6 lg:rounded-full shadow-lg h-14 lg:max-w-4xl px-12 lg:px-2 bg-background/60 backdrop-blur-lg'
+        ? 'top-0 lg:top-6 lg:rounded-full shadow-xl h-14 lg:max-w-4xl px-12 lg:px-2 bg-background/60 md:bg-background/70 backdrop-blur-lg'
         : 'top-2 lg:rounded-full h-14 max-w-4xl px-12 lg:px-0 sm:bg-transparent shadow-none sm:h-24 sm:max-w-6xl'
         }`}
     >

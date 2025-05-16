@@ -217,10 +217,17 @@ export default function Home() {
           </h3>
           <FAQs />
         </div>
-        <div className="mt-24 sm:mt-32 animate-fade-in-blur flex flex-col justify-center items-center space-y-8">
-          <h1 className="font-neue-montreal opacity-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[9rem] text-center">Join Flick Today</h1>
-          <CTAButton className="px-8 py-6 text-lg" />
-        </div>
+      </div>
+      <div className="mt-24 sm:mt-32 animate-fade-in-blur flex flex-col justify-center items-center space-y-6 px-4 text-center">
+        <h1 className="font-neue-montreal text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[12rem] font-extrabold bg-gradient-to-r from-[#dba979] via-[#f0cda0] to-[#c4a484] bg-clip-text text-transparent">
+          Join Flick Today
+        </h1>
+
+        <p className="text-lg sm:text-xl max-w-2xl text-gray-700 dark:text-gray-300">
+          No bios. No selfies. Just unfiltered college life.
+        </p>
+
+        <CTAButton className="px-8 py-6 text-lg hover:scale-105 transition-transform duration-200" />
       </div>
       <Footer />
     </div >
