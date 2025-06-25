@@ -142,18 +142,18 @@ export default function Home() {
       <Header />
       <div className="max-w-6xl mx-auto px-8 lg:px-4">
         <div className="flex flex-col justify-center items-center gap-6 sm:gap-8 h-[450px] sm:h-[500px] md:h-[550px] lg:h-[600px] pb-8">
-          <AnimateWrapper delay={0.3} once>
+          <AnimateWrapper delay={0.05} once>
             <SecondaryButton />
           </AnimateWrapper>
           <div className="flex flex-col justify-center items-center text-neutral-700 dark:text-neutral-300">
-            <TextAnimate as="h1" delay={0.4} className="font-neue-montreal text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl" animation="blurInUp" by="word" once>
+            <TextAnimate as="h1" delay={0.15} className="font-neue-montreal text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl" animation="blurInUp" by="word" once>
               Your Anonymous Campus Hangout
             </TextAnimate>
-            <TextAnimate delay={0.6} className="font-inter text-center mt-4 text-zinc-700 dark:text-zinc-300 sm:mt-6 sm:text-lg md:text-xl lg:text-2xl" animation="blurInUp" by="word" once>
+            <TextAnimate delay={0.35} className="font-inter text-center mt-4 text-zinc-700 dark:text-zinc-300 sm:mt-6 sm:text-lg md:text-xl lg:text-2xl" animation="blurInUp" by="word" once>
               Vent, share, connect - 100% anonymously. For Indian college students only.
             </TextAnimate>
           </div>
-          <AnimateWrapper delay={0.8} once>
+          <AnimateWrapper delay={0.55} once>
             <CTAButton size="xl" className="p-4 sm:p-6 text-sm md:text-md xl:text-lg" />
           </AnimateWrapper>
         </div>

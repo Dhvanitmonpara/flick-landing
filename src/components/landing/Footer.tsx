@@ -12,10 +12,10 @@ const Footer = () => {
         {/* Brand / About */}
         <div className="lg:col-span-2 xl:col-span-1">
           <h2 className="text-4xl font-avallon text-[#a86b4c]">Flick</h2>
-          <p className="mt-3 text-sm text-neutral-600 leading-relaxed">
+          <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
             Your anonymous campus hangout.
           </p>
-          <div className="flex items-center space-x-3 pt-4 text-zinc-600">
+          <div className="flex items-center space-x-3 pt-4 text-zinc-600 dark:text-neutral-400">
             <FaGithub onClick={() => window.open("https://github.com/Dhvanitmonpara/flick", "_blank")} className="hover:text-[#a86b4c] cursor-pointer" />
             <FaXTwitter onClick={() => window.open("https://x.com/useFlick", "_blank")} className="hover:text-[#a86b4c] cursor-pointer" />
             <FaLinkedin onClick={() => window.open("https://www.linkedin.com/in/dhvanitmonpara/", "_blank")} className="hover:text-[#a86b4c] cursor-pointer" />
@@ -24,32 +24,32 @@ const Footer = () => {
 
         {/* Navigation */}
         <div className="lg:col-span-2 xl:col-span-1">
-          <h3 className="text-sm font-semibold text-neutral-800 uppercase tracking-wide mb-3">
+          <h3 className="text-sm font-semibold text-neutral-800 dark:text-neutral-200 uppercase tracking-wide mb-3">
             Links
           </h3>
-          <ul className="space-y-2 text-sm text-neutral-600">
+          <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
             <li>
-              <Link href="/" className="hover:text-neutral-900 transition">
+              <Link href="/" className="hover:text-neutral-900 dark:hover:text-neutral-200 transition">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/features" className="hover:text-neutral-900 transition">
+              <Link href="/features" className="hover:text-neutral-900 dark:hover:text-neutral-200 transition">
                 Features
               </Link>
             </li>
             <li>
-              <Link href="/how-it-works" className="hover:text-neutral-900 transition">
+              <Link href="/how-it-works" className="hover:text-neutral-900 dark:hover:text-neutral-200 transition">
                 How it works
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-neutral-900 transition">
+              <Link href="/about" className="hover:text-neutral-900 dark:hover:text-neutral-200 transition">
                 FAQs
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-neutral-900 transition">
+              <Link href="/about" className="hover:text-neutral-900 dark:hover:text-neutral-200 transition">
                 About
               </Link>
             </li>
@@ -57,27 +57,27 @@ const Footer = () => {
         </div>
 
         <div className="lg:col-span-2 xl:col-span-1">
-          <h3 className="text-sm font-semibold text-neutral-800 uppercase tracking-wide mb-3">
+          <h3 className="text-sm font-semibold text-neutral-800 dark:text-neutral-200 uppercase tracking-wide mb-3">
             Contact Us
           </h3>
-          <ul className="space-y-2 text-sm text-neutral-600">
+          <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
             <li>
-              <a href="https://www.linkedin.com/in/dhvanitmonpara/" target="_blank" className="hover:text-neutral-900 transition">
+              <a href="https://www.linkedin.com/in/dhvanitmonpara/" target="_blank" className="hover:text-neutral-900 dark:hover:text-neutral-200 transition">
                 Linkedin
               </a>
             </li>
             <li>
-              <a href="https://x.com/dhvanitcantcode" target="_blank" className="hover:text-neutral-900 transition">
+              <a href="https://x.com/dhvanitcantcode" target="_blank" className="hover:text-neutral-900 dark:hover:text-neutral-200 transition">
                 Twitter
               </a>
             </li>
             <li>
-              <a href="https://github.com/Dhvanitmonpara" target="_blank" className="hover:text-neutral-900 transition">
+              <a href="https://github.com/Dhvanitmonpara" target="_blank" className="hover:text-neutral-900 dark:hover:text-neutral-200 transition">
                 Github
               </a>
             </li>
             <li>
-              <a href="mailto:monparadhvanit@gmail.com" target="_blank" className="hover:text-neutral-900 transition">
+              <a href="mailto:monparadhvanit@gmail.com" target="_blank" className="hover:text-neutral-900 dark:hover:text-neutral-200 transition">
                 Email Us
               </a>
             </li>
@@ -85,27 +85,27 @@ const Footer = () => {
         </div>
 
         <div className="md:col-span-2 lg:col-span-3 xl:col-span-1">
-          <h3 className="text-sm font-semibold text-neutral-800 uppercase tracking-wide mb-3">
+          <h3 className="text-sm font-semibold text-neutral-800 dark:text-neutral-200 uppercase tracking-wide mb-3">
             Legal
           </h3>
-          <ul className="space-y-2 text-sm text-neutral-600">
+          <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
             <li>
-              <Link href="/terms" className="hover:text-neutral-900 transition">
+              <Link href="/terms" className="hover:text-neutral-900 dark:hover:text-neutral-200 transition">
                 Terms of Service
               </Link>
             </li>
             <li>
-              <Link href="/privacy" className="hover:text-neutral-900 transition">
+              <Link href="/privacy" className="hover:text-neutral-900 dark:hover:text-neutral-200 transition">
                 Privacy Policy
               </Link>
             </li>
           </ul>
-          <Separator className="my-4 bg-neutral-300" />
+          <Separator className="my-4 bg-neutral-300 dark:bg-neutral-700" />
           <form onSubmit={e => e.preventDefault()} className="mt-4 flex">
             <input
               type="email"
               placeholder="Your email"
-              className="px-3 py-2 text-sm border border-neutral-300 rounded-l-md focus:outline-none"
+              className="px-3 py-2 text-sm border border-neutral-300 dark:border-neutral-700 rounded-l-md focus:outline-none"
             />
             <button className="bg-[#a86b4c] text-white px-4 py-2 text-sm rounded-r-md hover:bg-[#945c41]">
               Subscribe
@@ -115,9 +115,9 @@ const Footer = () => {
       </div>
 
 
-      <Separator className="my-8 bg-neutral-200" />
+      <Separator className="my-8 bg-neutral-200 dark:bg-neutral-800" />
 
-      <div className="max-w-7xl mx-auto text-center text-xs text-neutral-500">
+      <div className="max-w-7xl mx-auto text-center text-xs text-neutral-500 dark:text-neutral-400">
         © {new Date().getFullYear()} Flick. All rights reserved.
       </div>
     </footer>
