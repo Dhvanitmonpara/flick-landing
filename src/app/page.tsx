@@ -5,7 +5,6 @@ import { FeatureCard } from "@/components/landing/FeatureCard";
 import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
 import HowItWorksCard from "@/components/landing/HowItWorks";
-import HowItWorks from "@/components/landing/HowItWorks";
 import Post from "@/components/landing/Post";
 import SecondaryButton from "@/components/landing/SecondaryButton";
 import { TextAnimate } from "@/components/magicui/text-animate";
@@ -138,18 +137,18 @@ const mockPosts = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-tr bg-[linear-gradient(to_right,_#fdfcfb,_#e2d1c3)] dark:bg-[linear-gradient(to_right,_#2e2e2e,_#1a1a1a)]">
+    <div className="min-h-screen bg-gradient-to-tr bg-[linear-gradient(to_right,_#fdfcfb,_#e2d1c3)]">
       <Header />
       <div className="max-w-6xl mx-auto px-8 lg:px-4">
         <div className="flex flex-col justify-center items-center gap-6 sm:gap-8 h-[450px] sm:h-[500px] md:h-[550px] lg:h-[600px] pb-8">
           <AnimateWrapper delay={0.05} once>
             <SecondaryButton />
           </AnimateWrapper>
-          <div className="flex flex-col justify-center items-center text-neutral-700 dark:text-neutral-300">
+          <div className="flex flex-col justify-center items-center text-neutral-700">
             <TextAnimate as="h1" delay={0.15} className="font-neue-montreal text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl" animation="blurInUp" by="word" once>
               Your Anonymous Campus Hangout
             </TextAnimate>
-            <TextAnimate delay={0.35} className="font-inter text-center mt-4 text-zinc-700 dark:text-zinc-300 sm:mt-6 sm:text-lg md:text-xl lg:text-2xl" animation="blurInUp" by="word" once>
+            <TextAnimate delay={0.35} className="font-inter text-center mt-4 text-zinc-700 sm:mt-6 sm:text-lg md:text-xl lg:text-2xl" animation="blurInUp" by="word" once>
               Vent, share, connect - 100% anonymously. For Indian college students only.
             </TextAnimate>
           </div>
@@ -176,7 +175,7 @@ export default function Home() {
           ))}
         </div>
         <div className="rounded-xl mt-24 sm:mt-32 sm:rounded-2xl overflow-hidden animate-fade-in-blur shadow-[0_-4px_28px_rgba(0,0,0,0.25)] border-[0.5px]">
-          <div className="bg-zinc-100 dark:bg-zinc-800 h-6 sm:h-8 flex justify-between items-center px-4 sm:px-6">
+          <div className="bg-zinc-100 h-6 sm:h-8 flex justify-between items-center px-4 sm:px-6">
             <div className="flex justify-center items-center gap-1 sm:gap-2">
               <span className="rounded-full bg-red-400 w-2.5 h-2.5 sm:w-3.5 sm:h-3.5"></span>
               <span className="rounded-full bg-yellow-400 w-2.5 h-2.5 sm:w-3.5 sm:h-3.5"></span>
@@ -224,7 +223,7 @@ export default function Home() {
           Join Flick Today
         </h1>
 
-        <p className="text-lg sm:text-xl max-w-2xl text-gray-700 dark:text-gray-300">
+        <p className="text-lg sm:text-xl max-w-2xl text-gray-700">
           No bios. No selfies. Just unfiltered college life.
         </p>
 

@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import CTAButton from './CTAButton';
-import { IoIosMoon, IoMdSunny } from 'react-icons/io';
 
 const changeTheme = () => {
   const root = document.documentElement;
@@ -13,7 +12,6 @@ const changeTheme = () => {
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,11 +27,6 @@ function Header() {
     if (darkModeEnables) changeTheme();
   }, []);
 
-  const themeHandler = () => {
-    setIsDarkMode(!isDarkMode);
-    changeTheme();
-  }
-
   return (
     <div
       className={`sticky flex justify-between items-center transition-all duration-300 mx-auto z-50 ${scrolled
@@ -47,9 +40,6 @@ function Header() {
       <div className={`flex justify-center items-center ${scrolled ? "gap-8" : "gap-12"} animate-fade-in-blur`}>
         <Link className='hover:text-primary hover:font-semibold hidden sm:block' href="/">Features</Link>
         <Link className='hover:text-primary hover:font-semibold hidden sm:block' href="/">How it works</Link>
-        <button className='cursor-pointer' onClick={themeHandler}>
-          {isDarkMode ? <IoIosMoon /> : <IoMdSunny />}
-        </button>
         {scrolled && <CTAButton size='lg' className='animate-slide-in-left hidden sm:flex' />}
       </div>
     </div>
